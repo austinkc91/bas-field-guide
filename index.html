@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The BAS Professional's Field Guide — HVAC Controls Reference</title>
+<meta name="description" content="Complete field reference for BAS technicians and HVAC controls professionals. Commissioning checklists, control sequences, troubleshooting flowcharts, and sizing tables. Built by field experience.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a2e;
+  line-height: 1.6;
+  background: #fafafa;
+}
+.hero {
+  background: linear-gradient(135deg, #1a3a5c 0%, #2d6a4f 100%);
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.4em;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+.hero .subtitle {
+  font-size: 1.25em;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  display: inline-block;
+  background: #e76f51;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.price-tag {
+  margin-top: 12px;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+.price-tag .old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin-right: 8px;
+}
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #1a3a5c;
+}
+.pain-points {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.pain-point {
+  margin-bottom: 20px;
+  padding-left: 35px;
+  position: relative;
+}
+.pain-point::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.chapters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .chapters { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.8em; }
+}
+.chapter {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-left: 4px solid #2d6a4f;
+}
+.chapter .num {
+  font-size: 0.8em;
+  color: #2d6a4f;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.chapter h3 {
+  font-size: 1.05em;
+  margin-top: 4px;
+  color: #1a3a5c;
+}
+.chapter p {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 6px;
+}
+.sample-box {
+  background: #1a3a5c;
+  color: #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+.sample-box .title {
+  color: #7dcea0;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 12px;
+}
+.who-for {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .who-for { grid-template-columns: 1fr; }
+}
+.who-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+}
+.who-item .icon {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+.who-item h3 {
+  font-size: 1em;
+  margin-bottom: 6px;
+  color: #1a3a5c;
+}
+.who-item p {
+  font-size: 0.85em;
+  color: #666;
+}
+.final-cta {
+  background: linear-gradient(135deg, #1a3a5c 0%, #2d6a4f 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 800px;
+}
+.final-cta h2 { color: white; }
+.guarantee {
+  text-align: center;
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.guarantee p {
+  color: #666;
+  font-size: 0.9em;
+}
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #999;
+  font-size: 0.8em;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">For BAS Techs, HVAC Engineers & Controls Pros</div>
+  <h1>The BAS Professional's<br>Field Guide</h1>
+  <p class="subtitle">Every control sequence, checklist, and troubleshooting flowchart you need — in one printable reference. Built from real field experience.</p>
+  <a href="#buy" class="cta-btn">Get the Field Guide — $14</a>
+  <p class="price-tag"><span class="old-price">$39</span> Launch price — goes up soon</p>
+</div>
+
+<section>
+  <h2>Sound Familiar?</h2>
+  <div class="pain-points">
+    <div class="pain-point">You're standing in a mechanical room trying to remember the economizer enable conditions for the third time this week</div>
+    <div class="pain-point">Every commissioning job, you're rebuilding your checklists from scratch instead of working off proven templates</div>
+    <div class="pain-point">You Google "VAV troubleshooting" and get 50 pages of theory when you need a 30-second flowchart</div>
+    <div class="pain-point">You know the sizing rules of thumb exist somewhere in your notes from 3 years ago, but good luck finding them</div>
+    <div class="pain-point">New techs keep asking you the same questions: "What's the Cv formula again?" "How do you wire MSTP?"</div>
+  </div>
+</section>
+
+<section>
+  <h2>What's Inside</h2>
+  <div class="chapters">
+    <div class="chapter">
+      <span class="num">Chapter 1</span>
+      <h3>BAS Fundamentals Reference</h3>
+      <p>Complete terminology cheat sheet, system architecture overview, BACnet object types — everything at a glance.</p>
+    </div>
+    <div class="chapter">
+      <span class="num">Chapter 2</span>
+      <h3>Common Control Sequences</h3>
+      <p>AHU, VAV, chiller plant, boiler plant — copy-ready sequences with setpoints and logic you can use as-is.</p>
+    </div>
+    <div class="chapter">
+      <span class="num">Chapter 3</span>
+      <h3>Commissioning Checklists</h3>
+      <p>Pre-functional and functional test templates for AHUs, VAV boxes, and systems. Print and bring to the job site.</p>
+    </div>
+    <div class="chapter">
+      <span class="num">Chapter 4</span>
+      <h3>Troubleshooting Flowcharts</h3>
+      <p>"Space too hot," "Space too cold," "Controller offline," "VFD fault" — follow the flowchart to the fix.</p>
+    </div>
+    <div class="chapter">
+      <span class="num">Chapter 5</span>
+      <h3>System Sizing Quick Reference</h3>
+      <p>CFM per sq ft, cooling loads, hydronic sizing, duct sizing, ASHRAE 62.1 ventilation requirements.</p>
+    </div>
+    <div class="chapter">
+      <span class="num">Chapter 6</span>
+      <h3>Network & Protocols</h3>
+      <p>BACnet MSTP/IP wiring, Modbus registers, troubleshooting communication issues.</p>
+    </div>
+    <div class="chapter">
+      <span class="num">Chapter 7</span>
+      <h3>Sensor & Actuator Reference</h3>
+      <p>Sensor types and placement, valve Cv sizing, damper actuator torque, valve characteristics.</p>
+    </div>
+    <div class="chapter">
+      <span class="num">Chapters 8-10</span>
+      <h3>Energy, Alarms & Templates</h3>
+      <p>Top 10 energy savings measures, alarm priority matrix, point schedules, SOO templates, maintenance schedules.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Sample: Troubleshooting Flowchart</h2>
+  <div class="sample-box">
+    <div class="title">SPACE TOO HOT?</div>
+    Is the system in Occupied mode?<br>
+    &nbsp;&nbsp;NO → Check schedule. Override to Occupied.<br>
+    <br>
+    Is the thermostat reading correctly?<br>
+    &nbsp;&nbsp;Compare to handheld thermometer. Off by >2°F → Recalibrate.<br>
+    <br>
+    Is the VAV box calling for cooling?<br>
+    &nbsp;&nbsp;YES → Is the damper responding to command?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;NO → Check actuator: power? linkage? stroke?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;YES → Is airflow at maximum?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YES → Is discharge air cold enough?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO → AHU issue. Check CHW valve and coil DP.<br>
+    <br>
+    <span style="color:#7dcea0;">+ 3 more complete flowcharts in the guide</span>
+  </div>
+</section>
+
+<section>
+  <h2>Built For</h2>
+  <div class="who-for">
+    <div class="who-item">
+      <div class="icon">🔧</div>
+      <h3>BAS Technicians</h3>
+      <p>Stop Googling in the mechanical room. Get answers in seconds from your phone or a printed copy.</p>
+    </div>
+    <div class="who-item">
+      <div class="icon">📋</div>
+      <h3>Controls Engineers</h3>
+      <p>Ready-to-use sequence templates and commissioning checklists that save hours per project.</p>
+    </div>
+    <div class="who-item">
+      <div class="icon">🏢</div>
+      <h3>Facility Managers</h3>
+      <p>Understand what your BAS is doing and speak the same language as your controls contractor.</p>
+    </div>
+    <div class="who-item">
+      <div class="icon">🎓</div>
+      <h3>New Techs & Students</h3>
+      <p>The reference your training didn't give you. Get up to speed fast with real-world knowledge.</p>
+    </div>
+  </div>
+</section>
+
+<div class="final-cta" id="buy">
+  <h2>Get the Field Guide Today</h2>
+  <p style="max-width:500px; margin:0 auto 25px; opacity:0.9;">One PDF. Every reference you need. Print the quick reference card and keep it in your truck.</p>
+  <a href="#buy" class="cta-btn">Download Now — $14</a>
+  <p class="price-tag"><span class="old-price">$39</span> Launch price</p>
+</div>
+
+<div class="guarantee">
+  <p><strong>Satisfaction Guaranteed.</strong> If the field guide doesn't save you time on your next job, email us and we'll refund you. No questions asked.</p>
+</div>
+
+<footer>
+  &copy; 2026 BAS Field Guide. All rights reserved.
+</footer>
+
+</body>
+</html>
